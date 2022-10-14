@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма для заполнения</title>
+</head>
+<body>
+<div class="wrapper">
+  <header class="header">
+    <a class="logo" href="#"></a>
+    <button class="btn-toggle btn-toggle--closed btn-toggle--hide">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <nav class="nav">
+      <ul class="nav__list list">
+        <li class="nav__item">
+          <a class="nav__link nav__link--current" href="#">Главная</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Каталог продукции</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-form">
+    <section class="order-form">
+      <h1 class="order-form__title title">Подбор программы</h1>
+      <p class="order-form__text text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="order-form__form" method="post" action="#">
+        <fieldset class="order-form__info">
+          <legend class="order-form__form-title visually-hidden">Анкета</legend>
+          <ul class="order-form__order-list list">
+            <li class="order-form__item">
+          <label class="order-form__form-control" for="input-name">Имя*:
+            <input class="order-form__control-input-name" type="text" name="name" id="input-name" value="Барсик" required>
+          </label>
+            </li>
+            <li>
+          <label class="order-form__form-control" for="input-weight">Вес (кг):*
+            <input class="order-form__control-input" type="text" name="weight" id="input-weight" value="7" required>
+          </label>
+            </li>
+            <li>
+          <label class="order-form__form-control" for="input-age">
+            <input class="order-form__control-input" type="text" name="age" id="input-age" value="7">
+          </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__info">
+          <legend class="order-form__form-title visually-hidden">Цель</legend>
+          <ul class="order-form__form-list list">
+            <li class="order-form__item">
+          <label class="order-form__radio-control" for="input-radio-slim">Похудение</label>
+          <input class="order-form__radio-input" type="radio" name="radio-button" value="slim" id="input-radio-slim" checked>
+            </li>
+            <li class="order-form__item">
+              <label class="order-form__radio-control" for="input-radio-mass">Набор массы</label>
+              <input class="order-form__radio-input" type="radio" name="radio-button" value="mass" id="input-radio-mass">
+            </li>
+            <li class="order-form__item">
+              <label class="order-form__radio-control" for="input-radio-advice">Не знаю (Нужен ваш совет)</label>
+              <input class="order-form__radio-input" type="radio" name="radio-button" value="advice" id="input-radio-advice" checked>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__contacts">
+          <legend class="order-form__form-title">Контактные данные(владельца кота)</legend>
+          <ul class="order-form__form-list list">
+            <li class="order-form__item">
+              <label class="order-form__form-control" for="email">E-mail:*  </label>
+              <input class="order-form__control-input" type="email" id="email" name="email" required placeholder="kuklachev@gmail.com">
+            </li>
+            <li class="order-form__item">
+              <label class="order-form__form-control" for="input-phone"></label>
+              <input class="order-form__control-input" type="text" id="input-phone" name="contact-phone" placeholder="8 (960) 900-60-90" required>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__comment">
+          <legend class="order-form__form-title">Комментарий</legend>
+          <label class="visually-hidden" for="form-textarea">Пишите что хотите</label>
+          <textarea class="order-form__textarea-field" placeholder="Расскажите обо всех повадках кота" name="form-textarea" id="form-textarea"></textarea>
+        </fieldset>
+        <fieldset class="order-form__more">
+          <legend class="order-form__form-title">Дополнительно</legend>
+          <ul class="order-form__form-list list">
+            <li class="order-form__item">
+              <label class="order-form__form-control">Сахарозаменитель
+                <input class="order-form__checkbox-button" type="checkbox" name="checkbox" value="sugar free" checked>
+              </label>
+            </li>
+            <li class="order-form__item">
+              <label class="order-form__form-control">Питьевая вода
+                <input class="order-form__checkbox-button" type="checkbox" name="checkbox" value="water">
+              </label>
+            </li>
+            <li class="order-form__item">
+              <label class="order-form__form-control">Молоко
+                <input class="order-form__checkbox-button" type="checkbox" name="checkbox" value="milk">
+              </label>
+            </li>
+            <li class="order-form__item">
+              <label class="order-form__form-control">Витамины
+                <input class="order-form__checkbox-button" type="checkbox" name="checkbox" value="vitamins">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="order-form__form-button" type="submit">Отправить заявку</button>
+        <p class="order-form__text order-form__text--small text">* — Обязательные поля</p>
+      </form>
+    </section>
+    <section class="address">
+      <h2 class="address__title">приглашаем к сотрудничеству дилеров!</h2>
+      <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.320858715949147!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1664384019660!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+  <footer class="footer">
+    <a class="logo" href="#"></a>
+    <ul class="social list">
+      <li class="social__item"></li>
+      <li class="social__item"></li>
+      <li class="social__item"></li>
+    </ul>
+    <a class="footer__copyright" href="#"></a>
+  </footer>
+</div>
+</body>
+
+</html>

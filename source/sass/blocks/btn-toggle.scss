@@ -1,0 +1,31 @@
+.btn-toggle {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 17px;
+  cursor: pointer;
+  right: 20px;
+  z-index: 1;
+  background-color: transparent;
+  border: transparent;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--closed {
+    background-image: url();
+  }
+
+  &--open {
+    background-image: url();
+  }
+}
